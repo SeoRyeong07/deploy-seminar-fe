@@ -64,7 +64,9 @@ function App() {
             <span className="feed-count">{posts.length}</span>
           </div>
           {loading ? (
-            <p className="feed-status">불러오는 중...</p>
+            <div className="feed-status">
+              <span className="spinner" />
+            </div>
           ) : fetchError ? (
             <div className="feed-error">
               <p className="feed-error-title">서버에 연결할 수 없어요</p>
