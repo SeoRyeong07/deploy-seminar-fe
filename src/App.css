@@ -59,13 +59,27 @@
   margin-bottom: 0.75rem;
 }
 
-.message-form-top {
-  display: flex;
+.message-form-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name btn"
+    "msg  msg";
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .message-form-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "msg"
+      "btn";
+  }
 }
 
 .message-form-input {
+  grid-area: name;
   padding: 0.6rem 0.75rem;
   border: 1px solid #d1d5db;
   border-radius: 7px;
@@ -84,8 +98,13 @@
   border-color: #3b82f6;
 }
 
-.message-form-input-name {
-  flex: 1;
+.message-form-textarea {
+  grid-area: msg;
+}
+
+.message-form-btn {
+  grid-area: btn;
+  align-self: stretch;
 }
 
 .message-form-textarea {
