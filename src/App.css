@@ -29,7 +29,7 @@
   border: 1px solid #bbf7d0;
   border-radius: 9999px;
   font-size: 0.8rem;
-  color: #16a34a;
+  color: #15A249;
 }
 
 /* Main */
@@ -95,7 +95,7 @@
 }
 
 .message-form-input:focus {
-  border-color: #3b82f6;
+  border-color: #15A249;
 }
 
 .message-form-textarea {
@@ -126,12 +126,12 @@
 }
 
 .message-form-textarea:focus {
-  border-color: #3b82f6;
+  border-color: #15A249;
 }
 
 .message-form-btn {
   padding: 0.6rem 1.1rem;
-  background: #2563eb;
+  background: #15A249;
   color: #fff;
   border: none;
   border-radius: 7px;
@@ -142,7 +142,7 @@
 }
 
 .message-form-btn:hover:not(:disabled) {
-  background: #1d4ed8;
+  background: #0d8a3c;
 }
 
 .message-form-btn:disabled {
@@ -160,7 +160,7 @@
 }
 
 .message-form-success {
-  color: #16a34a;
+  color: #15A249;
 }
 
 /* Feed */
@@ -298,7 +298,7 @@
 }
 
 .post-item-dot-deploy {
-  background: #16a34a;
+  background: #15A249;
 }
 
 .post-item-dot-message {
@@ -317,7 +317,7 @@
   font-size: 0.7rem;
   font-weight: 600;
   background: #dcfce7;
-  color: #15803d;
+  color: #15A249;
 }
 
 .post-item-date {
