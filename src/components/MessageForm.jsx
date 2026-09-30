@@ -5,6 +5,7 @@ export default function MessageForm({ onSubmit }) {
   const [message, setMessage] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState(null)
+  const [success, setSuccess] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -14,6 +15,8 @@ export default function MessageForm({ onSubmit }) {
       await onSubmit(name, message)
       setName('')
       setMessage('')
+      setSuccess(true)
+      setTimeout(() => setSuccess(false), 2500)
     } catch (err) {
       setError(err.message)
     } finally {
@@ -45,7 +48,8 @@ export default function MessageForm({ onSubmit }) {
           {submitting ? '...' : '등록'}
         </button>
       </div>
-      {error && <p className="message-form-error">{error}</p>}
+      {error && <p className="message-form-feedback message-form-error">{error}</p>}
+      {success && <p className="message-form-feedback message-form-success">등록됐어요!</p>}
     </form>
   )
 }

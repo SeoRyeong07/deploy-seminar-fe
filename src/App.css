@@ -123,10 +123,17 @@
   cursor: not-allowed;
 }
 
-.message-form-error {
+.message-form-feedback {
   margin-top: 0.5rem;
   font-size: 0.8rem;
+}
+
+.message-form-error {
   color: #dc2626;
+}
+
+.message-form-success {
+  color: #16a34a;
 }
 
 /* Feed */
