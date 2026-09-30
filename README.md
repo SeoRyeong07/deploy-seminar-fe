@@ -1,16 +1,49 @@
-# React + Vite
+# 배포 인증 방명록
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+배포 세미나 실습용 프로젝트입니다.  
+Vercel에 배포하면 방명록에 본인 이름이 자동으로 등록됩니다.
 
-Currently, two official plugins are available:
+## 기술 스택
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React + Vite
+- 백엔드 서버: [deploy-seminar-server](https://github.com/suhyun113/deploy-seminar-server)
 
-## React Compiler
+## 주요 기능
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 배포 성공 시 자동으로 방명록에 이름 등록
+- 자유롭게 방명록 글 작성
+- 10초마다 자동으로 목록 갱신
 
-## Expanding the ESLint configuration
+## 로컬 실행
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/suhyun113/deploy-seminar-fe.git
+cd deploy-seminar-fe
+npm install
+```
+
+`.env.example`을 참고해서 `.env` 파일을 만들어주세요.
+
+```bash
+cp .env.example .env
+```
+
+```bash
+npm run dev
+```
+
+## 환경변수
+
+| 변수명 | 설명 | 필요 환경 |
+|--------|------|-----------|
+| `VITE_API_URL` | 백엔드 서버 주소 | 로컬 + Vercel |
+| `VITE_DEPLOYER_NAME` | 배포자 이름 (방명록 자동 등록용) | Vercel만 |
+
+## Vercel 배포
+
+1. 이 레포를 Fork
+2. Vercel에서 Fork한 레포 Import
+3. 환경변수 추가
+   - `VITE_API_URL` = `https://deploy-seminar-server.onrender.com`
+   - `VITE_DEPLOYER_NAME` = 본인 이름
+4. Deploy
