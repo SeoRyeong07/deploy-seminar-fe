@@ -234,6 +234,15 @@
   margin-bottom: 1rem;
 }
 
+.feed-error-desc code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem;
+  background: #f3f4f6;
+  color: #b91c1c;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
 .feed-error-retry {
   padding: 0.45rem 1rem;
   background: #fff;

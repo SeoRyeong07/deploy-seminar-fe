@@ -5,6 +5,7 @@ import PostList from './components/PostList'
 import './App.css'
 
 const DEPLOYER_NAME = import.meta.env.VITE_DEPLOYER_NAME
+const API_URL = import.meta.env.VITE_API_URL
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -70,10 +71,18 @@ function App() {
           ) : fetchError ? (
             <div className="feed-error">
               <p className="feed-error-title">서버에 연결할 수 없어요</p>
-              <p className="feed-error-desc">잠시 후 자동으로 다시 시도할게요</p>
-              <button className="feed-error-retry" onClick={loadPosts}>
-                지금 다시 시도
-              </button>
+              {!API_URL ? (
+                <p className="feed-error-desc">
+                  <code>VITE_API_URL</code> 환경변수가 설정되지 않았어요
+                </p>
+              ) : (
+                <>
+                  <p className="feed-error-desc">잠시 후 자동으로 다시 시도할게요</p>
+                  <button className="feed-error-retry" onClick={loadPosts}>
+                    지금 다시 시도
+                  </button>
+                </>
+              )}
             </div>
           ) : (
             <PostList posts={posts} />
