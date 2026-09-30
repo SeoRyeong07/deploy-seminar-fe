@@ -93,6 +93,15 @@
   min-width: 160px;
 }
 
+@media (max-width: 480px) {
+  .message-form-input-name,
+  .message-form-input-msg,
+  .message-form-btn {
+    width: 100%;
+    flex: none;
+  }
+}
+
 .message-form-btn {
   padding: 0.6rem 1.1rem;
   background: #2563eb;
