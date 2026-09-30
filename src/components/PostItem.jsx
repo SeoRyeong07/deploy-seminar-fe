@@ -10,8 +10,9 @@ function formatDate(iso) {
 export default function PostItem({ post }) {
   const isDeploy = post.type === 'deploy'
   return (
-    <li className={`post-item ${isDeploy ? 'post-item-deploy' : 'post-item-message'}`}>
+    <li className={`post-item ${isDeploy ? 'post-item-deploy' : ''}`}>
       <div className="post-item-header">
+        <span className={`post-item-dot ${isDeploy ? 'post-item-dot-deploy' : 'post-item-dot-message'}`} />
         <span className="post-item-name">{post.name}</span>
         {isDeploy && <span className="post-item-badge">배포 성공</span>}
         <span className="post-item-date">{formatDate(post.createdAt)}</span>
