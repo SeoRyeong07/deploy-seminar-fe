@@ -157,6 +157,43 @@
   font-size: 0.875rem;
 }
 
+.feed-error {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  border: 1px solid #fee2e2;
+  border-radius: 10px;
+}
+
+.feed-error-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b91c1c;
+  margin-bottom: 0.3rem;
+}
+
+.feed-error-desc {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.feed-error-retry {
+  padding: 0.45rem 1rem;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 0.8rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.feed-error-retry:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
 /* Post List */
 .post-list {
   list-style: none;

@@ -66,7 +66,13 @@ function App() {
           {loading ? (
             <p className="feed-status">불러오는 중...</p>
           ) : fetchError ? (
-            <p className="feed-status">{fetchError}</p>
+            <div className="feed-error">
+              <p className="feed-error-title">서버에 연결할 수 없어요</p>
+              <p className="feed-error-desc">잠시 후 자동으로 다시 시도할게요</p>
+              <button className="feed-error-retry" onClick={loadPosts}>
+                지금 다시 시도
+              </button>
+            </div>
           ) : (
             <PostList posts={posts} />
           )}
