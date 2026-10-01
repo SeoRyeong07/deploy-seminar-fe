@@ -6,6 +6,7 @@ Vercel에 배포하면 방명록에 본인 이름이 자동으로 등록됩니�
 ## 기술 스택
 
 - React + Vite
+- Vercel 프론트엔드 주소: (https://deploy-seminar-fe-psi.vercel.app/)
 - 백엔드 서버: [deploy-seminar-server](https://github.com/suhyun113/deploy-seminar-server)
 
 ## 주요 기능
